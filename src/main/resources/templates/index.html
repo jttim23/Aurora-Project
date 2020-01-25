@@ -280,7 +280,7 @@
                 </div>
                 <div class="modal-body">
                         <div class="booking-form">
-                                <form>
+                                <form id="reservation" method="post">
                                     <div class="row no-margin">
                                         <div class="col-sm-6">
                                             <div class="form-group">
@@ -330,11 +330,11 @@
                                     </div>
                                     <div class="form-group">
                                         <span class="form-label">Email</span>
-                                        <input class="form-control" type="email" placeholder="Enter your email">
+                                        <input class="form-control" type="email"  placeholder="Enter your email">
                                     </div>
                                     <div class="form-group">
                                         <span class="form-label">Phone</span>
-                                        <input class="form-control" type="tel" placeholder="Enter your phone number">
+                                        <input class="form-control" type="text" placeholder="Enter your phone number">
                                     </div>
                                     <div class="form-btn">
                                         <button class="submit-btn">Book Now</button>
@@ -342,7 +342,7 @@
                                 </form>
                             </div>
                 </div>
-                <div class="modal-footer">z
+                <div class="modal-footer">
                     <button class="btn btn-secondary" data-dismiss="modal" >Close</button>
                 </div>
             </div>
@@ -360,6 +360,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" th:src="@{//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="../static/bootstrap/bootstrap.min.js" th:src="@{/bootstrap/bootstrap.min.js}"></script>
-    
+
 </body>
 </html>
