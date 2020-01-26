@@ -63,7 +63,7 @@
                 <div class="col-md-6 mb-3">
                     <label for="validationTooltipUsername">E-mail</label>
                     <div class="input-group">
-                        <input type="text" th:field="*{email}"class="form-control" id="validationTooltipUsername" placeholder="E-mail" aria-describedby="validationTooltipUsernamePrepend" required>
+                        <input type="email" th:field="*{email}"class="form-control" id="validationTooltipUsername" placeholder="E-mail" aria-describedby="validationTooltipUsernamePrepend" required>
                         <div class="invalid-tooltip">
                         </div>
                     </div>
@@ -79,28 +79,28 @@
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip04">Adults (16+)</label>
-                    <input type="text" th:field="*{adults}" class="form-control" id="validationTooltip04" placeholder="Adults" required>
+                    <input type="number" th:field="*{adults}" class="form-control" id="validationTooltip04" placeholder="Adults" required>
                     <div class="invalid-tooltip">
                         Please provide a valid number.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip05">Children</label>
-                    <input type="text" th:field="*{children}" class="form-control" id="validationTooltip05" placeholder="Children" required>
+                    <input type="number" th:field="*{children}" class="form-control" id="validationTooltip05" placeholder="Children" required>
                     <div class="invalid-tooltip">
                         Please provide a valid number.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip06">Check In</label>
-                    <input type="text" th:field="*{checkIn}" class="form-control" id="validationTooltip06" placeholder="Check In" required>
+                    <input type="date" th:field="*{checkIn}" class="form-control" id="validationTooltip06" placeholder="Check In" required>
                     <div class="invalid-tooltip">
                         Please provide a valid date.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip07">Check Out</label>
-                    <input type="text" th:field="*{checkOut}" class="form-control" id="validationTooltip07" placeholder="Check Out" required>
+                    <input type="date" th:field="*{checkOut}" class="form-control" id="validationTooltip07" placeholder="Check Out" required>
                     <div class="invalid-tooltip">
                         Please provide a valid date.
                     </div>
