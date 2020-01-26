@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css" >
+    <link  href="../static/css/app.css" th:href="@{/css/app.css}" rel="stylesheet" >
     <title>Aurora</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
                     <a href="#newsletter" class="nav-link">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-toggle="modal" data-target="#bookingModal">Rezerwuj</a>
+                    <a th:href="@{/reservationForm}" class="nav-link">Rezerwuj</a>
                 </li>
             </ol>
         </div>
@@ -265,7 +265,7 @@
                         <a href="#newsletter" class="nav-link text-white">KONTAKT</a>
                     </li>
                     <li class="nav-item">
-                            <a href="" class="nav-link text-white" data-toggle="modal" data-target="#bookingModal">REZERWUJ</a>
+                            <a th:href="@{/reservationForm}" class="nav-link text-white">REZERWUJ</a>
                         </li>
      </ul>
     </section >
@@ -279,70 +279,70 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                        <div class="booking-form">
-                                <form>
-                                    <div class="row no-margin">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Check In</span>
-                                                <input class="form-control" type="date" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Check Out</span>
-                                                <input class="form-control" type="date" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row no-margin">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Adults (18+)</span>
-                                                <select class="form-control">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                </select>
-                                                <span class="select-arrow"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Children (0-17)</span>
-                                                <select class="form-control">
-                                                    <option>0</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                </select>
-                                                <span class="select-arrow"></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="booking-form">
+                        <form>
+                            <div class="row no-margin">
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <span class="form-label">Room Type</span>
-                                        <select class="form-control" required>
-                                            <option value="" selected hidden>Select room type</option>
-                                            <option>Private Room (1 to 2 People)</option>
-                                            <option>Family Room (1 to 4 People)</option>
+                                        <span class="form-label">Check In</span>
+                                        <input class="form-control" type="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Check Out</span>
+                                        <input class="form-control" type="date" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-margin">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Adults (18+)</span>
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
                                         </select>
                                         <span class="select-arrow"></span>
                                     </div>
+                                </div>
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <span class="form-label">Email</span>
-                                        <input class="form-control" type="email" placeholder="Enter your email">
+                                        <span class="form-label">Children (0-17)</span>
+                                        <select class="form-control">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
                                     </div>
-                                    <div class="form-group">
-                                        <span class="form-label">Phone</span>
-                                        <input class="form-control" type="tel" placeholder="Enter your phone number">
-                                    </div>
-                                    <div class="form-btn">
-                                        <button class="submit-btn">Book Now</button>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <span class="form-label">Room Type</span>
+                                <select class="form-control" required>
+                                    <option value="" selected hidden>Select room type</option>
+                                    <option>Private Room (1 to 2 People)</option>
+                                    <option>Family Room (1 to 4 People)</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                            <div class="form-group">
+                                <span class="form-label">Email</span>
+                                <input class="form-control" type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <span class="form-label">Phone</span>
+                                <input class="form-control" type="tel" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-btn">
+                                <button class="submit-btn">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-footer">z
+                <div class="modal-footer">
                     <button class="btn btn-secondary" data-dismiss="modal" >Close</button>
                 </div>
             </div>
@@ -352,13 +352,15 @@
 
 
 
+
     <script src="/js/drag.js"></script>
     
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" th:src="@{//code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" th:src="@{//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="../static/bootstrap/bootstrap.min.js" th:src="@{/bootstrap/bootstrap.min.js}"></script>
+
 </body>
 </html>
