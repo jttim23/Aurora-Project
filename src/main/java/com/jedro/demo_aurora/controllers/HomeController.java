@@ -8,24 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-//    private ReservationRepository repository;
-//
-//    public HomeController(ReservationRepository repository) {
-//        this.repository = repository;
-//    }
 
-    @GetMapping({"", "/", "/index"})
+    @GetMapping({"", "/", "/home"})
     public String homePage() {
         return "index";
 
     }
-    @GetMapping("reservationForm")
-    public String reservation(Model model){
-        model.addAttribute(new Reservation());
-        return "reservationForm";
-    }
-    @GetMapping("payment")
-    public String paymentPage(){
-        return "payment";
-    }
+
 }
