@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link  href="../static/css/app.css" th:href="@{/css/app.css}" rel="stylesheet" >
+    <link href="../static/css/app.css" th:href="@{/css/app.css}" rel="stylesheet">
     <title>Aurora-Reservation System</title>
 </head>
 <body>
@@ -48,13 +49,15 @@
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">First name</label>
-                    <input type="text" th:field="*{firstName}" class="form-control" id="validationTooltip01" placeholder="First name" required>
+                    <input type="text" th:field="*{firstName}" class="form-control" id="validationTooltip01"
+                           placeholder="First name" required>
                     <div class="valid-tooltip">
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">Last name</label>
-                    <input type="text" th:field="*{lastName}"class="form-control" id="validationTooltip02" placeholder="Last name" required>
+                    <input type="text" th:field="*{lastName}" class="form-control" id="validationTooltip02"
+                           placeholder="Last name" required>
                     <div class="valid-tooltip">
                     </div>
                 </div>
@@ -63,14 +66,16 @@
                 <div class="col-md-6 mb-3">
                     <label for="validationTooltipUsername">E-mail</label>
                     <div class="input-group">
-                        <input type="email" th:field="*{email}"class="form-control" id="validationTooltipUsername" placeholder="E-mail" aria-describedby="validationTooltipUsernamePrepend" required>
+                        <input type="email" th:field="*{email}" class="form-control" id="validationTooltipUsername"
+                               placeholder="E-mail" aria-describedby="validationTooltipUsernamePrepend" required>
                         <div class="invalid-tooltip">
                         </div>
                     </div>
                 </div>
-                    <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Phone Number</label>
-                    <input type="text" th:field="*{phoneNr}" class="form-control" id="validationTooltip03" placeholder="Phone Number" required>
+                    <input type="text" th:field="*{phoneNr}" class="form-control" id="validationTooltip03"
+                           placeholder="Phone Number" required>
                     <div class="invalid-tooltip">
                         Please provide a valid phone number.
                     </div>
@@ -79,42 +84,46 @@
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip04">Adults (16+)</label>
-                    <input type="number" th:field="*{adults}" class="form-control" id="validationTooltip04" placeholder="Adults" required>
+                    <input type="number" th:field="*{adults}" class="form-control" id="validationTooltip04"
+                           placeholder="Adults" required>
                     <div class="invalid-tooltip">
                         Please provide a valid number.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip05">Children</label>
-                    <input type="number" th:field="*{children}" class="form-control" id="validationTooltip05" placeholder="Children" required>
+                    <input type="number" th:field="*{children}" class="form-control" id="validationTooltip05"
+                           placeholder="Children" required>
                     <div class="invalid-tooltip">
                         Please provide a valid number.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip06">Check In</label>
-                    <input type="date" th:field="*{checkIn}" class="form-control" id="validationTooltip06" placeholder="Check In" required>
+                    <input type="date" th:field="*{checkIn}" class="form-control" id="validationTooltip06"
+                           placeholder="Check In" required>
                     <div class="invalid-tooltip">
                         Please provide a valid date.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationTooltip07">Check Out</label>
-                    <input type="date" th:field="*{checkOut}" class="form-control" id="validationTooltip07" placeholder="Check Out" required>
+                    <input type="date" th:field="*{checkOut}" class="form-control" id="validationTooltip07"
+                           placeholder="Check Out" required>
                     <div class="invalid-tooltip">
                         Please provide a valid date.
                     </div>
                 </div>
             </div>
-<!--            <div class="form-row">-->
-<!--                <div class="col-md-4 mb-3">-->
-<!--                    <label for="validationTooltip08">Zip</label>-->
-<!--                    <input type="text" class="form-control" id="validationTooltip08" placeholder="Zip" required>-->
-<!--                    <div class="invalid-tooltip">-->
-<!--                        Please provide a valid zip.-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <!--            <div class="form-row">-->
+            <!--                <div class="col-md-4 mb-3">-->
+            <!--                    <label for="validationTooltip08">Zip</label>-->
+            <!--                    <input type="text" class="form-control" id="validationTooltip08" placeholder="Zip" required>-->
+            <!--                    <div class="invalid-tooltip">-->
+            <!--                        Please provide a valid zip.-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
             <button class="btn btn-primary" type="submit">Submit form</button>
         </form>
 
@@ -122,9 +131,12 @@
 </section>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" th:src="@{//code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" th:src="@{//code.jquery.com/jquery-3.3.1.slim.min.js}"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" th:src="@{//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        th:src="@{//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
 <script src="../static/bootstrap/bootstrap.min.js" th:src="@{/bootstrap/bootstrap.min.js}"></script>
 

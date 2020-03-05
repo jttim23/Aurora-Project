@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+
 @Service
 public class ReservationServiceImp implements ReservationService {
     private final ReservationRepository reservationRepository;
@@ -35,20 +36,20 @@ public class ReservationServiceImp implements ReservationService {
         reservationRepository.save(reservation);
         return reservation;
     }
+
     @Override
     public boolean validDate(Reservation reservation) throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String dateCheckIn = reservation.getCheckIn();
         String dateCheckOut = reservation.getCheckOut();
-            Date dateIn = formatter.parse(dateCheckIn);
-            Date dateOut = formatter.parse(dateCheckOut);
-            Date todayDate = formatter.parse(formatter.format(new Date()));
-            if (todayDate.after(dateIn)) {
-                return false;
-            }
-             else if (dateIn.before(dateOut)) {
-                    return true;
-                }
-                 return false;
+        Date dateIn = formatter.parse(dateCheckIn);
+        Date dateOut = formatter.parse(dateCheckOut);
+        Date todayDate = formatter.parse(formatter.format(new Date()));
+        if (todayDate.after(dateIn)) {
+            return false;
+        } else if (dateIn.before(dateOut)) {
+            return true;
+        }
+        return false;
     }
 }

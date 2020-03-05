@@ -7,9 +7,12 @@ import java.util.List;
 
 
 public interface ReservationService {
-   List<Reservation> getReservations();
+    List<Reservation> getReservations();
+
     Reservation findById(Long l);
+
     Reservation saveReservation(Reservation reservation);
+
     boolean validDate(Reservation reservation) throws ParseException;
 
 }

@@ -33,6 +33,6 @@ public class Reservation {
     @NonNull
     private String email;
     @NonNull
-   @Size(max = 9, min = 9)
+    @Size(max = 9, min = 9)
     private String phoneNr;
 }

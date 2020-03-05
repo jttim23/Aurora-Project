@@ -20,27 +20,28 @@ public class ReserveController {
     public ReserveController(ReservationService service) {
         this.service = service;
     }
+
     @GetMapping("reservationForm")
-    public String reservationPage(Model model){
+    public String reservationPage(Model model) {
         model.addAttribute(new Reservation());
         return "reservationForm";
     }
+
     @PostMapping("/reserve")
-        public String submitReservation(@ModelAttribute @Valid Reservation reservation, Errors errors) throws ParseException {
-        if (errors.hasErrors()){
+    public String submitReservation(@ModelAttribute @Valid Reservation reservation, Errors errors) throws ParseException {
+        if (errors.hasErrors()) {
             System.out.println("errors occured");
             return "/reservationForm";
 
-        }
-        else if (service.validDate(reservation)){
+        } else if (service.validDate(reservation)) {
             System.out.println("date valid");
             service.saveReservation(reservation);
-            return "redirect:/payment";}
-        else {
+            return "redirect:/payment";
+        } else {
             System.out.println("date invalid");
             return "/reservationForm";
         }
 
-}
+    }
 
 }

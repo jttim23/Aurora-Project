@@ -21,6 +21,7 @@ class ReservationServiceImpTest {
         MockitoAnnotations.initMocks(this);
         serviceImp = new ReservationServiceImp(repository);
     }
+
     @Test
     public void testDataValidation() throws ParseException {
         Reservation reservation = new Reservation();
